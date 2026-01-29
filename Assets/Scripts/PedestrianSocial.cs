@@ -245,7 +245,6 @@ public class PedestrianSocial : MonoBehaviour
         cooldownTimer = personalCooldown;
         other.cooldownTimer = other.personalCooldown;
 
-        // Greeting exchange (two lines)
         SaySafe(GreetingLine(other.agent.agentName));
         other.SaySafe(ReplyGreetingLine());
 
@@ -267,7 +266,6 @@ public class PedestrianSocial : MonoBehaviour
             return;
         }
 
-        // end
         if (Time.time >= convoEndTime)
         {
             SaySafe(PickGoodbye());
@@ -342,7 +340,6 @@ public class PedestrianSocial : MonoBehaviour
             speechText.transform.forward = Camera.main.transform.forward;
     }
 
-    // --- Lines ---
     Topic RandomTopic()
     {
         float r = Random.value;

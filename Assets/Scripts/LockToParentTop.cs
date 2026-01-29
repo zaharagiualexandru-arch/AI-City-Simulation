@@ -7,13 +7,10 @@ public class LockToParentTop : MonoBehaviour
 
     void LateUpdate()
     {
-        // Always stay at the same local offset (prevents drifting)
         transform.localPosition = localOffset;
 
-        // Cancel out parent rotation
         transform.localRotation = Quaternion.identity;
 
-        // Optional: face camera for readability
         if (faceCamera && Camera.main != null)
         {
             transform.rotation = Quaternion.LookRotation(

@@ -35,13 +35,11 @@ public class IntersectionTrafficController : MonoBehaviour
         }
     }
 
-    // For cars: only green means go
     public bool CarsCanGo(LaneDirection lane)
     {
         return GetLightState(lane) == TrafficLight.LightState.Green;
     }
 
-    // NEW: returns the visible state for a given direction
     public TrafficLight.LightState GetLightState(LaneDirection lane)
     {
         bool laneIsNS = (lane == LaneDirection.North || lane == LaneDirection.South);
